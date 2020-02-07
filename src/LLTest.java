@@ -43,8 +43,12 @@ public class LLTest
 		coolist.sortedInsert(2);
 		coolist.sortedInsert(1);
 		System.out.println(coolist);
-		System.out.println(coolist.reverse());
+		System.out.println(coolist.reverseString());
 		coolist.removeDuplicates();
 		System.out.println(coolist);
+		System.out.println(coolist.clone());
+		coolist.reverse();
+		System.out.println(coolist);
+		System.out.println(coolist.reverseString());
     }
 }

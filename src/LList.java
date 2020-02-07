@@ -130,8 +130,38 @@ public class LList
 			}
 		}
 	}
+	
+	public void reverse() {
+		LNode c = tail;
+		LNode oldTail = tail;
+		LNode oldPrev = null;
+		while(c != null){
+			System.out.println(c);
+			if(c == head){
+				tail = head;
+				head = oldTail;
+			}
+			LNode l = c.getPrev();
+			c.setNext(l);
+			c.setPrev(oldPrev);
+			if(l != null){
+				oldPrev = l.getPrev();
+			}
+			c = l;
+		}
+	}
+	
+	@Override
+	public LList clone() {
+		LList ret = new LList();
+		for(LNode c = head; c != null; c = c.getNext()){
+			int val = c.getVal();
+			ret.enqueue(val);	
+		}
+		return ret;
+	}
 
-	public String reverse (){
+	public String reverseString (){
 		LNode tmp = tail;
 		String ans = "[";
 		while (tmp != null){
@@ -141,6 +171,7 @@ public class LList
 		return ans.substring(0,ans.length()-2)+"]";
 	}
 
+	@Override
     public String toString (){
 		LNode tmp = head;
 		String ans = "";
