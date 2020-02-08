@@ -18,6 +18,7 @@ public class LLTest
 			System.out.println (coolist);
 		}
 		coolist.pop();*/
+		/*
     	coolist.enqueue(92);
 		System.out.println (coolist);
     	coolist.enqueue(5);
@@ -49,6 +50,74 @@ public class LLTest
 		System.out.println(coolist.clone());
 		coolist.reverse();
 		System.out.println(coolist);
-		System.out.println(coolist.reverseString());
+		System.out.println(coolist.reverseString());*/
+		/*
+		coolist.reverse();
+		coolist.removeDuplicates();
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.add(1);
+		coolist.removeDuplicates();
+		coolist.pop();
+		coolist.add(1);
+		coolist.removeDuplicates();
+		System.out.println(coolist);*/
+		/*
+		coolist.add(1);
+		coolist.add(4);
+		coolist.add(3);
+		coolist.add(5);
+		coolist.add(2);
+		coolist.add(17);
+		coolist.add(1);
+		coolist.add(4);
+		coolist.add(3);
+		coolist.add(5);
+		coolist.add(2);
+		coolist.add(17);
+		coolist.add(1);
+		coolist.add(4);
+		coolist.add(3);
+		coolist.add(5);
+		coolist.add(2);
+		coolist.add(17);
+		coolist.add(1);
+		coolist.add(4);
+		coolist.add(3);
+		coolist.add(5);
+		coolist.add(2);
+		coolist.add(17);
+		coolist.add(1);
+		coolist.add(4);
+		coolist.add(3);
+		coolist.add(5);
+		coolist.add(2);
+		coolist.add(17);
+		System.out.println(coolist);
+		coolist.removeDuplicates();
+		System.out.println(coolist);*/
     }
 }

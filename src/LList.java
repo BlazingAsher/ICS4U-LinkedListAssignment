@@ -5,6 +5,7 @@ public class LList
     
     public LList (){
 		head = null;
+		tail = null;
     }
 	
     public void add (int n){
@@ -134,19 +135,16 @@ public class LList
 	public void reverse() {
 		LNode c = tail;
 		LNode oldTail = tail;
-		LNode oldPrev = null;
+		LNode newPrev = null;
 		while(c != null){
-			System.out.println(c);
 			if(c == head){
 				tail = head;
 				head = oldTail;
 			}
 			LNode l = c.getPrev();
 			c.setNext(l);
-			c.setPrev(oldPrev);
-			if(l != null){
-				oldPrev = l.getPrev();
-			}
+			c.setPrev(newPrev);
+			newPrev = c;
 			c = l;
 		}
 	}
