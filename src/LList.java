@@ -148,35 +148,40 @@ public class LList
 	 * @param n the value to insert
 	 */
 	public void sortedInsert(int n){
-    	// need to handle add at head
-		// add at tail
 		LNode prev = null;
 		LNode next = null;
 
-		for(LNode c = head; c != null; c = c.getNext()){
-			// Get the LNodes that will be previous of and next to the value
-			if(c.getVal() <= n && (c.getNext() == null || c.getNext().getVal() >= n)){
+		// Start from the tail since we are ascending from it
+		for(LNode c = tail; c != null; c = c.getPrev()) {
+			// Value fits between c and the previous OR we are at the head
+			if(c.getVal() <= n && (c.getPrev() == null || c.getPrev().getVal() >= n)){
+				prev = c.getPrev();
+				next = c;
+				break;
+			}
+			// Value is smaller than c (will be put at tail)
+			else if(c.getVal() > n){
 				prev = c;
-				next = c.getNext();
+				next = null;
 				break;
 			}
 		}
 
 		LNode tmp = new LNode(prev, n, next);
 		// If the new node will be the head, set it as so
-    	if(prev == null){
-    		head = tmp;
+		if(prev == null){
+			head = tmp;
 		}
-    	else{
-    		prev.setNext(tmp);
+		else {
+			prev.setNext(tmp);
 		}
 
-    	// If the new node will be the tail, set it as so
-    	if(next == null){
-    		tail = tmp;
+		// If the new node will be the tail, set it as so
+		if(next == null){
+			tail = tmp;
 		}
-    	else{
-    		next.setPrev(tmp);
+		else {
+			next.setPrev(tmp);
 		}
 	}
 
@@ -232,6 +237,10 @@ public class LList
 		return ret;
 	}
 
+	/**
+	 * Returns the LList as a string backwards. Courtesy of Mr. Mckenzie
+	 * @return the LList as a string backwards
+	 */
 	public String reverseString (){
 		LNode tmp = tail;
 		String ans = "[";
