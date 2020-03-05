@@ -81,32 +81,32 @@ public class LLTest
 
 
 
-		coolist.sortedInsert(4);
-		coolist.sortedInsert(4);
-		coolist.sortedInsert(4);
-		coolist.sortedInsert(4);
-		coolist.sortedInsert(4);
-		coolist.sortedInsert(4);
-		coolist.sortedInsert(4);
-		coolist.sortedInsert(4);
-		
-		coolist.sortedInsert(5);
-		coolist.sortedInsert(5);
-		coolist.sortedInsert(5);
-		coolist.sortedInsert(5);
-		coolist.sortedInsert(5);
-		coolist.sortedInsert(5);
-		coolist.sortedInsert(5);
-		coolist.sortedInsert(5);
-		
-		coolist.sortedInsert(10);
-		coolist.sortedInsert(10);
-		coolist.sortedInsert(10);
-		coolist.sortedInsert(10);
-		coolist.sortedInsert(10);
-		coolist.sortedInsert(10);
-		coolist.sortedInsert(10);
-		coolist.sortedInsert(10);
+//		coolist.sortedInsert(4);
+//		coolist.sortedInsert(4);
+//		coolist.sortedInsert(4);
+//		coolist.sortedInsert(4);
+//		coolist.sortedInsert(4);
+//		coolist.sortedInsert(4);
+//		coolist.sortedInsert(4);
+//		coolist.sortedInsert(4);
+//
+//		coolist.sortedInsert(5);
+//		coolist.sortedInsert(5);
+//		coolist.sortedInsert(5);
+//		coolist.sortedInsert(5);
+//		coolist.sortedInsert(5);
+//		coolist.sortedInsert(5);
+//		coolist.sortedInsert(5);
+//		coolist.sortedInsert(5);
+//
+//		coolist.sortedInsert(10);
+//		coolist.sortedInsert(10);
+//		coolist.sortedInsert(10);
+//		coolist.sortedInsert(10);
+//		coolist.sortedInsert(10);
+//		coolist.sortedInsert(10);
+//		coolist.sortedInsert(10);
+//		coolist.sortedInsert(10);
 		
 //
 //		coolist.push(3);
@@ -136,7 +136,11 @@ public class LLTest
 //		coolist.push(1);
 //		coolist.push(5);
 //
-//		coolist.deleteAt(1413);
+//		coolist.delete(3);
+//		coolist.delete(6);
+//		coolist.delete(1);
+//		coolist.delete(5);
+		coolist.push(1);
 
 		System.out.println("Orig:");
 		System.out.println(coolist);

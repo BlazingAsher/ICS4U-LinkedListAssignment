@@ -25,7 +25,7 @@ public class LList
 			tail = tmp;
 		}
 		else{
-			// Refer the one head to the new node
+			// Refer the old head to the new node
 			head.setPrev(tmp);
 		}
 		head = tmp;
@@ -88,7 +88,7 @@ public class LList
 	}
 
 	/**
-	 * Deletes a node from the LLNode
+	 * Deletes a node from the LList
 	 * @param node the LLNode to delete
 	 */
 	private void delete(LNode node) {
@@ -113,7 +113,7 @@ public class LList
 	}
 
 	/**
-	 * Deletes the first occcurance from the head of a value
+	 * Deletes the first occurrence from the head of a value
 	 * @param n the value to delete
 	 */
 	public void delete(int n){
@@ -137,14 +137,16 @@ public class LList
 		for(LNode c = head; c != null; c = c.getNext()){
 			if(i == ind){
 				delete(c);
-				break;
+				return;
 			}
 			i++;
 		}
+		// Traversed the whole list and did not find it, throw an error
+		throw new IndexOutOfBoundsException();
 	}
 
 	/**
-	 * Inserts a value while maintaining the a sorted LList
+	 * Inserts a value while maintaining a sorted LList
 	 * @param n the value to insert
 	 */
 	public void sortedInsert(int n){
@@ -224,7 +226,11 @@ public class LList
 			c = l;
 		}
 	}
-	
+
+	/**
+	 * Returns an LList with the exact same values as the current one
+	 * @return an LList with the exact same values as the current one
+	 */
 	@Override
 	public LList clone() {
 		LList ret = new LList();
@@ -242,8 +248,10 @@ public class LList
 	 * @return the LList as a string backwards
 	 */
 	public String reverseString (){
+		// start at the tail
 		LNode tmp = tail;
 		String ans = "[";
+		// traverse the LList and add all the values to a string
 		while (tmp != null){
 			ans += tmp+", ";
 			tmp = tmp.getPrev();
@@ -251,14 +259,21 @@ public class LList
 		return ans.substring(0,ans.length()-2)+"]";
 	}
 
+	/**
+	 * Returns the LList as a string. Courtesy of Mr. Mckenzie
+	 * @return the LList as a string
+	 */
 	@Override
     public String toString (){
+		// start at the head
 		LNode tmp = head;
 		String ans = "";
+		// traverse the LList and add all the values to a string
 		while (tmp != null){
 		    ans += tmp+", ";
 		    tmp = tmp.getNext ();
 		}
+		// remove excess characters
 		if(head != null){
 			ans = ans.substring(0,ans.length()-2);
 		}
